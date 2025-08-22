@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff6600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+/* Highlight for active NavLink */
+.nav-links .active {
+  color: #ff5a5f;           /* Bright color for visibility */
+  font-weight: bold;        /* Make it stand out */
+  border-bottom: 2px solid #ff5a5f;  /* Optional underline */
+  transition: all 0.3s ease;
+}
+.nav-links .active .login-btn {
+  border: 2px solid #ff5a5f;
+  background-color: rgba(255, 90, 95, 0.1);
+}
+
+.nav-links a,
+.nav-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.active{
+  color:blue;
+}
+.nav-links a:hover,
+.nav-link:hover {
+  color: #ff6600;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive menu toggle (optional) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+.login-btn {
+  padding: 8px 16px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  object-fit: cover;
+  margin-left: 1px;
+    background-color: #fcf9f7;
+ 
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%; /* make it span full width */
+    padding: 1rem 2rem;
+    border-radius: 0;
+    z-index: 999; /* ensure it's on top */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links a,
+  .nav-link {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
